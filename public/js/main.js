@@ -1,16 +1,12 @@
-/* 메인최상위 선언 및 하위 컨텐츠 박스 선언 */
 const box = document.querySelector('.scrollBox');
 const container = document.querySelector('#mainWrapper');
-/* 페이지 로딩 영역 선언 */
 const pScreen = document.querySelector('.pageScreen');
 const downToUp = document.querySelectorAll('.downToup');
-/* 헤더 영역 선언 */
 const haeder = document.querySelector('.headerLeft');
 const logoChange = document.querySelector('.Head');
 const btn = document.querySelector('.HeaderBtn');
 const logoArea = document.querySelector('#logoContainer');
 const gnb = document.querySelector("#gnb");
-/* 이미지 박스 영역 선언 */
 const introImg = document.querySelector('.imgBox img');
 
 const startWorkBox = document.querySelector('.artwork img');
@@ -20,18 +16,13 @@ const rdartWorkBox = document.querySelector('.artwork:nth-child(3) img');
 const stJournal = document.querySelector('.contBox figure img');
 const ndJournal = document.querySelector('.contBox:nth-child(2) figure img');
 const rdJournal = document.querySelector('.contBox:nth-child(3) figure img');
-/* h2Title 제목부분 영역 선언 */
 const titRight = document.querySelectorAll('.titRight span');
 const titLeft = document.querySelectorAll('.titLeft span');
-/* 저널 애니메이션 */
 const jornalTrans = document.querySelectorAll('.aniTextBox > li');
-/* progress 영역 선언 */
 const proGress = document.querySelector('.headProgress');
 
-/* contianer scrollLeft 값 */
+/* container scrollLeft  */
 const containerScrL = container.scrollLeft;
-/* 가로스크롤 이벤트 */
-/* 델타값을 이용하여 스크롤 되도록 값도 저장되게 */
 /* function transNum (e){
     let scrNum = 0;
     scrNum += e.deltaY;
@@ -51,7 +42,6 @@ const scrollLeft = (e) =>{
     console.log(transNum);
     // container.style.transform = `translateX(-${transNum}px)`;
     
-    /* 델타Y 중첩값이 일정 이상이 될때 조건문 */
     switch (transNum) {
         case 100:
             logoArea.style.opacity = '0'
@@ -95,20 +85,17 @@ const scrollLeft = (e) =>{
 }  
 container.addEventListener('wheel', scrollLeft);
 
-/* 메뉴 여닫기 설유미님 작업 */
 btn.addEventListener("click", (e) => {
     e.preventDefault();
     haeder.classList.toggle('active');
     gnb.classList.toggle("active");
   });
 
-/* 메뉴 한부분 클릭하면 닫힘 (닫힐 때 이상하게 닫힘..) */
 //   gnb.addEventListener("click", (e) => {
 //     gnb.classList.remove("active");
 //   });
 
 
-/* 페이지 로딩 스크린 이벤트 */
 function pageAniTime() {
     /* downToUp.forEach((idx) => {
         if (idx === 0){
@@ -139,12 +126,11 @@ function pageAniTime() {
 }
 pageAniTime();
 
-/* 헤더 영역 클릭시 active 클래스 추가 */
+/* active */
 btn.addEventListener('click', e =>{
     e.preventDefault();
 });
 
-/* 스크롤 진행도 표시 */
 function crtProgress(){
     const scrollLt = container.scrollLeft;
     const scrollWd = container.scrollWidth;

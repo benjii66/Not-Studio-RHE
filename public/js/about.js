@@ -1,4 +1,3 @@
-// 메뉴아이콘 클릭했을 때
 const toggleBtn = document.querySelector("#toggleBtn");
 const menuBar = document.querySelector(".menuBar");
 const gnb = document.querySelector("#gnb");
@@ -9,13 +8,11 @@ toggleBtn.addEventListener("click", (e) => {
   gnb.classList.toggle("active");
 });
 
-// 메뉴 한부분 클릭하면 닫힘 (닫힐 때 이상하게 닫힘..)
 
 gnb.addEventListener("click", (e) => {
   gnb.classList.remove("active");
 });
 
-// 좌우 스크롤 휠로 제어
 
 const wrapper = document.querySelector("#wrapper");
 const boxes = document.querySelectorAll("#wrapper > div");
@@ -25,7 +22,6 @@ const scrolled = (e) => {
 };
 wrapper.addEventListener("wheel", scrolled);
 
-// 우측 바 로고
 
 const rhe = document.querySelector(".rhe");
 const rheLogo = document.querySelector(".rhe svg");
@@ -42,7 +38,6 @@ addEventListener("wheel", (e) => {
   }
 });
 
-// 우측 바 스크롤 인디케이터
 const sIndi = document.querySelector(".scrollIndi");
 
 function progress() {
@@ -56,7 +51,6 @@ function progress() {
 progress();
 addEventListener("wheel", progress);
 
-// 스크롤을 일정px씩 부드럽게 이동시키기 (미완)
 
 addEventListener("wheel", (e) => {
   wrapper.scroll({
@@ -64,7 +58,6 @@ addEventListener("wheel", (e) => {
   });
 });
 
-// 런던 글자 애니메이션
 
 // const london = document.querySelector(".down");
 // addEventListener("wheel", (e) => {
@@ -75,7 +68,6 @@ addEventListener("wheel", (e) => {
 //   }
 // });
 
-// // 어워즈 글자 애니메이션
 
 // const awards = document.querySelector(".box8 h1");
 
@@ -114,7 +106,6 @@ const scrollLeft = (e) => {
 };
 wrapper.addEventListener("wheel", scrollLeft);
 
-// 멤버들 프로필 비디오
 
 /* const richardI = document.querySelector(".box7-1 figure .videoWrapper img");
 const richardV = document.querySelector(".box7-1 figure .videoWrapper video");
@@ -157,23 +148,20 @@ videoWrapper.forEach((wp, idx) => {
   });
 });
 
-// 재생버튼
-// 휠을 굴리면 프로필 이미지 약축소효과
+
 
 let observer = new IntersectionObserver((e) => {
-  // e 는 감시중인 div박스
+  // e div
   e.forEach((img) => {
     if (img.isIntersecting) {
-      //박스가 등장시 실행됨
-      img.target.style.transform = `scale(1)`; //서서히 나타남
+      img.target.style.transform = `scale(1)`;
     } else {
-      //박스가 사라지면 실행됨
-      // img.target.style.opacity = 0; //서서히 사라짐
+      // img.target.style.opacity = 0; 
     }
   });
 });
 
-// observer.observe() html 요소가 화면에 등장하는지 감시
+// observer.observe() html 
 observer.observe(imgs[0]);
 observer.observe(imgs[1]);
 observer.observe(imgs[2]);
@@ -185,7 +173,6 @@ observer.observe(imgs[7]);
 observer.observe(imgs[8]);
 observer.observe(imgs[9]);
 
-// 좌측 상단 로고 애니메이션
 
 const logo = document.querySelector(".box1 a");
 addEventListener("wheel", () => {
@@ -195,5 +182,3 @@ addEventListener("wheel", () => {
     logo.style.opacity = 1;
   }
 });
-
-//

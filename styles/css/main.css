@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 변수 */
+/* Variables */
 :root {
   --basic-box-padding: 50px 60px;
   --basic-border: 1px solid #bfbfbf;
@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 공통 사용 */
+/* Common Usage */
 .uLine {
   position: relative;
   line-height: 1.1;
@@ -282,7 +282,7 @@ header .headerLeft.active .HeaderBtn .Line3 {
   transform: rotate(-26deg) translateX(-6px);
 }
 
-/* 펼쳐지는 메뉴 */
+
 header .gnbBack {
   position: fixed;
   width: 100%;
@@ -347,8 +347,6 @@ header #gnb li:nth-child(4):hover a {
   color: white;
 }
 
-/* 메뉴오픈 */
-/* 펼쳐졌을 때 */
 header #gnb.active {
   width: 80vw;
   height: 100vh;
@@ -501,7 +499,7 @@ header #gnb.active li:nth-child(4) {
   font-size: 12.13vw;
   width: 100%;
   text-align: center;
-  text-indent: -50px;
+  text-indent: -10px;
   color: #fff;
   z-index: 99;
   overflow: hidden;
@@ -527,7 +525,7 @@ header #gnb.active li:nth-child(4) {
   display: inline-block;
 }
 
-/* span 부분 애니메이션 삽질 */
+/* span */
 #FirstContainer .introbox .h2Title .titLeft span:nth-child(2) {
   -webkit-animation-duration: 1.6s;
           animation-duration: 1.6s;
@@ -607,7 +605,7 @@ header #gnb.active li:nth-child(4) {
           animation-duration: 2.5s;
 }
 
-/* span 애니메이션 삽질 끝 */
+/* span*/
 #FirstContainer .shadowBox {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
   position: absolute;
